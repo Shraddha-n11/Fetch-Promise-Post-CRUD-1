@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1920&q=85") center/cover fixed;
+}
+
+.books-heading {
+    background: rgba(255, 253, 247, 0.95);
+    color: #082f4b;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.books-heading h3 {
+    color: #082f4b;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.books-heading p {
+    color: #526575;
+    margin-bottom: 0;
+}
+
+.book-header {
+    background: #082f4b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.book-header h1 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.book-header p {
+    color: white;
+    margin-bottom: 0;
+}
+
+.book-header span {
+    color: #f7b733;
+}
+
+.book-card {
+    background: #fffdf7;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    background: #082f4b;
+    color: white;
+}
+
+.book-card {
+    box-shadow: 0 3px 10px #0002;
+}
+
+.book-image {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+}
+
+.submit-btn {
+    background: #082f4b;
+    color: white;
+}
+
+.update-btn {
+    background: #f7b733;
+    color: #082f4b;
+}
+
+.book-card .icon i {
+    cursor: pointer;
+}

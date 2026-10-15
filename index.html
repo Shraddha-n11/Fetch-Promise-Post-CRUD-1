@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Book Haven - Book CRUD</title>
+</head>
+
+<body>
+    <header class="book-header text-center">
+        <h1>
+            <i class="fa-solid fa-book-open"></i>
+            Book <span>Haven</span>
+        </h1>
+        <p>Manage Your Library | Explore</p>
+    </header>
+    <div class="container-fluid mt-4 px-4">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="card book-form">
+                    <div class="card-header">
+                        <h4 class="mb-0">
+                            <i class="fa-solid fa-book-open"></i>
+                            Add Book
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="form">
+                            <div class="form-group">
+                                <label for="BookTitle">
+                                    <i class="fa-solid fa-book"></i>
+                                    Book Title
+                                </label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="BookTitle"
+                                    placeholder="Enter book title"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Author">
+                                    <i class="fa-solid fa-user"></i>
+                                    Author
+                                </label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="Author"
+                                    placeholder="Enter author name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Category">
+                                    <i class="fa-solid fa-folder"></i>
+                                    Category
+                                </label>
+                                <select
+                                    class="form-control"
+                                    id="Category"
+                                    required>
+                                    <option value="">Select Category</option>
+                                    <option value="Fiction">Fiction</option>
+                                    <option value="Self Help">Self Help</option>
+                                    <option value="Biography">Biography</option>
+                                    <option value="Thriller">Thriller</option>
+                                    <option value="Fantasy">Fantasy</option>
+                                    <option value="Science Fiction">Science Fiction</option>
+                                    <option value="Classics">Classics</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Price">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                    Price (₹)
+                                </label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Price"
+                                    placeholder="Enter price"
+                                    min="0"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ImageURL">
+                                    <i class="fa-solid fa-image"></i>
+                                    Cover Image URL
+                                </label>
+                                <input
+                                    type="url"
+                                    class="form-control"
+                                    id="ImageURL"
+                                    placeholder="Paste image URL"
+                                    required>
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn btn-block submit-btn"
+                                id="SubmitBtn">
+                                <i class="fa-solid fa-plus"></i>
+                                Add Book
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-block update-btn d-none"
+                                id="UpdateBtn">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                Update Book
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9 col-md-8">
+                <div class="books-heading">
+                    <h3><i class="fa-solid fa-book-open-reader"></i> My Book Collection</h3>
+                    <p>Explore your favourite books</p>
+                </div>
+                <div class="row" id="booksdata">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="spinner d-none" id="spinner">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+
+</body>
+</html>
